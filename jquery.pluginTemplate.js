@@ -13,7 +13,7 @@
       var $this = $(this);
       // build element specific options. Uses the Metadata plugin if available
       // @see http://docs.jquery.com/Plugins/Metadata/metadata
-      var o = $.meta ? $.extend({}, opts, .data()) : opts;
+      var o = $.meta ? $.extend({}, opts, $this.data()) : opts;
       // implementations
     });
   };
