@@ -31,8 +31,9 @@
 
   // private function for debugging
   function debug() {
+    var $this = $(this);
     if (window.console && window.console.log)
-      window.console.log('selection count: ' + .size());
+      window.console.log('selection count: ' + $this.size());
   };
 
 })(jQuery);
