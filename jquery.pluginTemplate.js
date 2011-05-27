@@ -2,6 +2,11 @@
  * A jQuery plugin template.
  * This extends @hantu's basic template.
  *
+ * Author: Jesse Beach
+ * Author URI: http://qemist.us
+ * Author Twitter: @jessebeach
+ * Author Github: https://github.com/jessebeach
+ *
  * With input from:
  *  @see hantu https://github.com/hantu/jquery-plugin-template
  *  @see http://www.learningjquery.com/2007/10/a-plugin-development-pattern
