@@ -10,7 +10,7 @@
 
     // iterate over matched elements
     return this.each(function() {
-      var  = $(this);
+      var $this = $(this);
       // build element specific options. Uses the Metadata plugin if available
       // @see http://docs.jquery.com/Plugins/Metadata/metadata
       var o = $.meta ? $.extend({}, opts, .data()) : opts;
