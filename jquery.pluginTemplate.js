@@ -1,3 +1,16 @@
+/**
+ * A jQuery plugin template.
+ * This extends @hantu's basic template.
+ *
+ * With input from:
+ *  @see hantu https://github.com/hantu/jquery-plugin-template
+ *  @see http://www.learningjquery.com/2007/10/a-plugin-development-pattern
+ *
+ * Reference
+ *  @see http://docs.jquery.com/Plugins/Metadata/metadata
+ *
+ */
+
 (function($) {
 
   // replace 'pluginName' with the name of your plugin
