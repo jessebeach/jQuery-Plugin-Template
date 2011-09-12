@@ -1,3 +1,9 @@
+/*jslint bitwise: true, eqeqeq: true, immed: true, newcap: true, nomen: false,
+ onevar: false, plusplus: false, regexp: true, undef: true, white: true, indent: 2
+ browser: true */
+
+/*global jQuery: true window: true document: true */
+
 /**
  * A jQuery plugin template.
  * This extends @hantu's basic template.
@@ -96,4 +102,6 @@
       }
     }
   }
-)(jQuery);
+  // Pass jQuery as the param to the preceding anonymous function
+  (jQuery)
+);
