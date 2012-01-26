@@ -1,0 +1,12 @@
+/* TEAM */
+	Lead: <name>
+	Contact: <name> [at] <domain>
+	Twitter: @<username>
+	From: <location>
+		
+
+/* SITE */
+	Last update: <date>
+	Language: English
+	Doctype: HTML5
+	IDE: Espresso, Chrome

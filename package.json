@@ -1,0 +1,30 @@
+{
+    "name": "pluginName",
+    "version": "",
+    "title": "jQuery.pluginName()",
+    "author": {
+        "name": "<username>",
+        "url": "https://github.com/<username>"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "MIT-LICENSE.txt"
+        }
+    ],
+    "dependencies": {
+        "jquery": "~1"
+    },
+    "description": "",
+    "keywords": [],
+    "homepage": "https://github.com/<path>/<to>/</project>",
+    "maintainers": [
+        {
+            "name": "<username>",
+            "url": "https://github.com/<username>"
+        }
+    ],
+    "files": [
+        "jquery.pluginName.js"
+    ]
+}
