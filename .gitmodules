@@ -1,0 +1,3 @@
+[submodule "plugins/jquery.doLater"]
+	path = plugins/jquery.doLater
+	url = git@github.com:jessebeach/doLater.git
