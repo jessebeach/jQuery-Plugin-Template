@@ -1,12 +1,11 @@
 /* TEAM */
-	Lead: <name>
-	Contact: <name> [at] <domain>
-	Twitter: @<username>
-	From: <location>
+	Lead: J. Renée Beach
+	Contact: jesse [at] qemistry [dot] com
+	Twitter: @jessebeach
+	From: Cambridge, MA
 		
 
 /* SITE */
-	Last update: <date>
 	Language: English
 	Doctype: HTML5
 	IDE: Espresso, Chrome

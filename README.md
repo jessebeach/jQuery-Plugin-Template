@@ -1,1 +1,26 @@
-Not much to see here.
+Plugin Name
+=============
+
+Features
+-------
+
+* [display text](URL) -- `some code`
+
+
+Contributing
+------------
+
+
+### Commands
+
+
+Installation
+-----------
+
+//
+Usage
+-----
+
+
+Contributing
+------------
