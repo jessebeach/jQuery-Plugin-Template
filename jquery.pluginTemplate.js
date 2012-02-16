@@ -90,7 +90,7 @@
 				// @see http://docs.jquery.com/Plugins/Metadata/metadata
 				var o = $.meta ? $.extend({}, opts, $this.data()) : opts;
 				// Set up the data.
-				$(this).data(plugin, {
+				$this.data(plugin, {
 					target : $this,
 					name : plugin,
 					timers: []
