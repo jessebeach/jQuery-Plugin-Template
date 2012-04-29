@@ -1,8 +1,8 @@
 /*jslint bitwise: true, eqeqeq: true, immed: true, newcap: true, nomen: false,
- onevar: false, plusplus: false, regexp: true, undef: true, white: true, indent: 2
+ onevar: false, plusplus: false, regexp: true, undef: true, white: true, indent: 4
  browser: true */
 
-/*global jQuery: true window: true document: true */
+/*global window: true define: true */
 
 /**
  * A jQuery plugin template.
@@ -15,22 +15,47 @@
  *
  * With input from:
  *  @see hantu https://github.com/hantu/jquery-plugin-template
+ *  @see jrburke https://github.com/umdjs/umd
  *  @see http://www.learningjquery.com/2007/10/a-plugin-development-pattern
  *  @see http://jqueryboilerplate.com/
  *
- * Reference
- *  @see http://docs.jquery.com/Plugins/Metadata/metadata
+ * TEMPLATE USE
+ * Find the string 'pluginName' just below and replace it with the name
+ * of your plugin.
  */
 
-(function ($, window, document, undefined) {
+(function (factory) {
+	// Load this plugin with require.js if available.
+	if (typeof define === 'function' && define.amd) {
+		// AMD. Register as an anonymous module.
+		define(['jquery'], factory);
+	} else {
+		// If jQuery is not defined, warn the user and return.
+		if (window.jQuery === undefined) {
+			if (typeof window.console === 'object' && typeof window.console.log === 'function') {
+				console.log("The plugin \"pluginName\" failed to run because jQuery is not present.");
+			}
+			return null;
+		}
+		// Call the plugin factory. jQuery is a global object.
+		factory();
+	}
+}
+// The plugin factory function.
+(function () {
 	// Replace 'pluginName' with the name of your plugin.
 	var plugin = 'pluginName',
 	// A private reference to this $plugin object.
-	$plugin;
-
+	$plugin,
+	// Local copies of context globals (sandbox).
+	document = window.document,
+	navigator = window.navigator,
+	location = window.location,
+	// Local copy of jQuery.
+	$ = window.jQuery,
 	// Private variables
-	var html = $('html').get(0);
-	var textDirection = (html.dir) ? html.dir : 'ltr';
+	html = document.documentElement,
+	textDirection = (html.dir) ? html.dir : 'ltr';
 
 	// Private function definitions.
 	/**
@@ -62,9 +87,9 @@
 		}
 		$this.trigger('debug');
 	}
-	function report (event) {
+	function report(event) {
 		var $this = $(this);
-		$this.html('this is a report.');
+		$this.html('Timers are working. This is a report.');
 	}
 
 	// Private function for debugging.
@@ -86,22 +111,20 @@
 			// Iterate over matched elements.
 			return this.each(function () {
 				var $this = $(this);
-				// Build element specific options. Uses the Metadata plugin if available.
-				// @see http://docs.jquery.com/Plugins/Metadata/metadata
-				var o = $.meta ? $.extend({}, opts, $this.data()) : opts;
 				// Set up the data.
 				$this.data(plugin, {
 					target : $this,
 					name : plugin,
 					timers: []
 				});
-				// Plugin behavior.
+				// Define your plugin behavior here.
 				$this
 				.data(plugin, {
 					timers: []
 				})
+				.text('Click here')
 				.bind('report', report)
-				.bind('click', {delay: 1500, toTrigger: 'report', iterate: 5}, setDelay)
+				.bind('click', {delay: 500, toTrigger: 'report', iterate: 5}, setDelay)
 				.css({
 					width: 100,
 					height: 100,
@@ -114,7 +137,7 @@
 		}
 	};
 
-	// Add the plugin to
+	// Add the plugin as a property of the jQuery fn object.
 	$plugin = $.fn[plugin] = function (method) {      
 		// Method calling logic
 		if (methods[method]) {
@@ -131,9 +154,6 @@
 
 	// public functions definition
 	$.fn[plugin].functionName = function (foo) {
-		console.log('hi');
-		return this;
+		return null;
 	};
-}
-// Pass jQuery as the param to the preceding anonymous function
-(jQuery, window, document, undefined));
+}));
